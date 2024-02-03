@@ -13,6 +13,8 @@ public class LearnString {
 
 		char ch[] = { 'h', 'u', 'n', 'g' };
 		String hung = new String(ch);// chuyển mảng thành chuỗi
+		// chuyển chuỗi thành mảng
+		char ch1[]=hung.toCharArray();
 		System.out.println(ch);
 		System.out.println(hung);
 

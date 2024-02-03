@@ -100,7 +100,7 @@ public class Queens_Knights_Pawns {
 										// thì i và j + hoặc - 1 đơn vị.
 			int newRow = viTriHang + qStraightMove[i];
 			int newCol = viTriCot + qStraightMove[i];
-			while (true) {// tiến
+			while (true) {// tiến lùi
 
 				if (newRow >= 0 && newRow < n && array[newRow][viTriCot] != 2 && array[newRow][viTriCot] != 3
 						&& array[newRow][viTriCot] != 4) {
@@ -110,7 +110,7 @@ public class Queens_Knights_Pawns {
 					break;
 				}
 			}
-			while (true) {// lùi
+			while (true) {// ngang 2 bên
 				if (newCol >= 0 && newCol < m && array[viTriHang][newCol] != 2 && array[viTriHang][newCol] != 3
 						&& array[viTriHang][newCol] != 4) {
 					array[viTriHang][newCol] = 1;
