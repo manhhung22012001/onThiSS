@@ -1,0 +1,66 @@
+SPATHP - Giao Hàng Nhanh
+Hăng ngày Tèo phải Giao hàng đến các địa điển được xác định sẵn và quay trở về nhà. Tèo mất rất nhiều thời gian để di chuyển giữa các địa điểm vì khoảng cách giữa các địa điểm cần đến là khác nhau.
+
+Tèo nghĩ ra một phương án là Luôn luôn lập kế hoạch các địa điểm cần đến trước để tiết kiệm thời gian.
+
+Tèo đã biết trước được khoảng cách giữa các địa điểm, Nên từ vị trí hiện tại của Tèo, Tèo sẽ chọn địa điểm tiếp theo để giao hàng là điển có khoảng cách ngắn nhất trong các địa điểm mà Tèo chưa giao đến
+
+
+
+ 
+
+Giải thích:
+
+Tư vị trí số 1 Tèo có 4 lựa chọn, vì quãng đường đến địa điểm số 3 là nhỏ nhất nên tèo sẽ đi đến số địa điểm 3
+Từ vị trí số 3 Tèo có 3 lựa chọn là các địa điểm 2, 4, 5. Tèo chọn địa điểm số 4 vì có quãng đường nhỏ nhất
+Từ vị trí số 4 Tèo còn lại 2 lựa chọn là các địa điểm 2 và 5. Tèo chọn địa điểm số 5 vì có khoảng cách nhỏ hơn.
+Từ vị trí số 5 Tèo chỉ còn lại 1 lựa chọn là đến địa điểm số 2.
+Kết thúc hành trình Tèo quay lại điểm xuất phát
+lưu ý:
+
+Tèo Sẽ không đi lại địa điểm mà đã đi qua trước đó 
+Tèo luôn luôn xuất phát từ điểm số 0 và kết thúc tại điểm xuất phát
+Cho thông tin khoảng cách giữa các địa điểm dưới dạng ma trận. Hãy giúp Tèo tính Tổng quãng đường cần phải đi.
+
+Input
+Đầu vào bao gồm nhiều test case. Dòng đầu tiên là số lương các test case T (T<=100), Thông tin về mỗi test case như sau:
+
+Mỗi test case được cho trên N+1 dòng. Trong đó:
+
+Dòng đầu tiên là số N (5<=N<=100) là tổng số các địa điểm cần giao hàng đến
+
+N dòng tiếp theo, mỗi dòng thứ i gồm N số k (10<=k<=1000) cách nhau bằng dấu cách, thể hiện khoảng cách của vị trí thứ i với các vị trí còn lại
+
+Output
+Đua ra output trên T dòng tương ứng với T test case.
+
+Mỗi test case in ra "#tc", với tc là số thứ tự của test case, đánh số bắt đầu từ 1, tiếp theo đó là khoảng trắng (dấu cách) và cuối cùng là kết quả tương ứng với từng test case
+
+Kết quả là tổng quãng đường mà Tèo phải di chuyển.
+
+Example
+Input:
+3
+5
+0 26 48 69 48 
+26 0 20 44 24 
+48 20 0 45 62 
+69 44 45 0 18 
+48 24 62 18 0 
+5
+0 35 25 60 41 
+35 0 81 51 30 
+25 81 0 70 72 
+60 51 70 0 47 
+41 30 72 47 0 
+5
+0 65 12 36 89 
+65 0 68 80 90 
+12 68 0 30 38 
+36 80 30 0 49 
+89 90 38 49 0 
+Output:
+#1 157
+#2 207
+#3 246
+50 26 48 69 48 26 0 20 44 24 48 20 0 45 62 69 44 45 0 18 48 24 62 18 0 50 35 25 60 41 35 0 81 51 30 25 81 0 70 72 60 51 70 0 47 41 30 72 47 0 50 65 12 36 89 65 0 68 80 90 12 68 0 30 38 36 80 30 0 49 89 90 38 49 0 

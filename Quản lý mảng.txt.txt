@@ -1,0 +1,51 @@
+MNGARR - Quản lý mảng
+Cho mảng A chứa các số nguyên có tối đa 1000 phần tử.
+Yêu cầu thực hiện 1 số câu lệnh cơ bản như thêm một phần tử vào 1 vị trí bất kỳ của mảng, sửa giá trị của 1 phần tử bất kỳ trong mảng và xóa một phần tử bất kỳ trong mảng.
+Ví dụ:
+Cho mảng A ban đầu là: 1 2 3 4 5
+câu lệnh "insert 3 8": chèn số 8 vào vị trí số 3 của mảng => mảng sẽ trở thành:
+1 2 3 8 4 5
+câu lệnh "update 5 9": sửa phần tử ở vị trí thứ 5 thành số 9 => mảng sẽ trở thành:
+1 2 3 8 4 9
+câu lệnh "delete 2": xóa phần tử ở vị trí số 2 => mảng sẽ trở thành:
+1 2 8 4 9
+Hãy viết chương trình thực hiện M thao tác và in ra mảng cuối cùng sau khi thực hiện xong các thao tác.
+Lưu ý: dữ liệu của input đảm bảo các vị trí trong các lệnh luôn hợp lệ. Ví dụ mảng hiện tại có 10 phần tử thì vị trí trong các lệnh sẽ là các số từ 0 đến 9.
+Không sử dụng thư viện đối với bài này
+
+Input
+Dòng đầu tiên chưa số lượng test case T
+Mỗi test case gồm nhiều dòng.
+Dòng đầu tiên là số phần tử ban đầu của mảng N.
+Dòng thứ 2 bao gồm N số phân biệt nhau bởi dấu cách, là dữ liệu của mảng A.
+Dòng thứ 3 là số thao tác M
+M dòng tiếp theo là mô tả về các thao tác cần thực hiện.
+Ví dụ:
+5 //ban đầu mảng có 5 phần tử
+1 2 3 4 5 //dữ liệu ban đầu của mảng A
+3 //có tổng cộng 3 thao tác
+insert 3 8 //chèn số 8 vào vị trí thứ 3 của mảng
+update 5 9 //sửa phần tử ở vị trí thứ 5 thành số 9
+delete 2 //xóa phần tử ở vị trí số 2
+Output
+In kết quả theo định dạng sau: ký tự đầu tiên là “#”, tiếp theo là số thứ tự của test case, tiếp theo là dấu cách và cuối cùng là mảng A sau khi thực hiện M thao tác. Các số trong mảng A được phân biệt nhau bởi dấu cách.
+
+Example
+Input:
+2
+5
+1 2 3 4 5
+3
+insert 3 8
+update 5 9
+delete 2
+4
+8 1 7 0
+3
+insert 0 10
+delete 4
+update 3 100
+
+Output:
+#1 1 2 8 4 9
+#2 10 8 1 100
